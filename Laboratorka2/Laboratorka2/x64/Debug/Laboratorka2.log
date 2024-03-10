@@ -1,0 +1,4 @@
+﻿  GUI.cpp
+C:\FICT\TA\Labaratorka2\Laboratorka2\Laboratorka2\GUI.cpp(41,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  Algorithms.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Laboratorka2.vcxproj -> C:\FICT\TA\Labaratorka2\Laboratorka2\x64\Debug\Laboratorka2.exe
