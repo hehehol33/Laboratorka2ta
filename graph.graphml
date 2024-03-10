@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <graph id="G">
+        <node id="n0" x="680" y="410" name="1" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n1" x="680" y="220" name="2" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n2" x="1060" y="410" name="3" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n3" x="1160" y="220" name="4" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n4" x="1160" y="560" name="5" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n5" x="680" y="580" name="6" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n6" x="600" y="410" name="7" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n7" x="1230" y="280" name="8" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n8" x="1240" y="410" name="9" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n9" x="880" y="580" name="10" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <node id="n10" x="880" y="460" name="11" radius="20" fontSize="18" background="#ffffff" color="#000000" border="#000000"/>
+        <edge id="e0" source="n0" target="n6" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e1" source="n10" target="n5" weight="" isDirected="true" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e2" source="n1" target="n2" weight="" isDirected="true" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e3" source="n3" target="n7" weight="" isDirected="true" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e4" source="n8" target="n4" weight="" isDirected="true" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e5" source="n4" target="n2" weight="" isDirected="true" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e6" source="n0" target="n1" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e7" source="n0" target="n9" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e8" source="n9" target="n5" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e9" source="n10" target="n1" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e10" source="n0" target="n2" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e11" source="n0" target="n3" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e12" source="n0" target="n7" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e13" source="n1" target="n3" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e14" source="n1" target="n7" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e15" source="n1" target="n8" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e16" source="n3" target="n8" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e17" source="n3" target="n2" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+        <edge id="e18" source="n4" target="n7" weight="" isDirected="false" controlStep="0" fontSize="18" lineWidth="2" background="#000000" color="#000000" />
+    </graph>
+</graphml>
