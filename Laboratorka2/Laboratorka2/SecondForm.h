@@ -66,6 +66,7 @@ public:
 
                 // Add separator
                 labelText += "--------------------------------------------------------------------\n";
+               
 
             }
         }
@@ -75,7 +76,7 @@ public:
 
 
         labelText += "\n";
-
+        labelText += "Execution Time: " + result.executiontime.ToString() + " milliseconds\n";
         // Set the text of labelRoute
         labelRoute->Text = labelText;
     }

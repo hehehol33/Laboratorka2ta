@@ -116,6 +116,7 @@ namespace Laboratorka2 {
 			this->groupBoxAlgorithm->TabIndex = 1;
 			this->groupBoxAlgorithm->TabStop = false;
 			this->groupBoxAlgorithm->Text = L"Вибір алгоитму";
+			this->groupBoxAlgorithm->Enter += gcnew System::EventHandler(this, &MainForm::groupBoxAlgorithm_Enter);
 			// 
 			// radioButtonBellmanFord
 			// 
@@ -314,7 +315,23 @@ namespace Laboratorka2 {
 
 		}
 #pragma endregion
-
+		private: System::Void secondForm_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e)
+		{
+			// Очистіть вибір радіобатонів на головній формі
+			radioButtonRedUniversity->Checked = false;
+			radioButtonAndriivskaChurch->Checked = false;
+			radioButtonStMichaelsCathedral->Checked = false;
+			radioButtonGoldenGate->Checked = false;
+			radioButtonLyadskiGate->Checked = false;
+			radioButtonFunicular->Checked = false;
+			radioButtonKPI->Checked = false;
+			radioButtonFountainOnKhreshchatyk->Checked = false;
+			radioButtonStSophiaCathedral->Checked = false;
+			radioButtonNationalPhilharmonic->Checked = false;
+			radioButtonOneStreetMuseum->Checked = false;\
+				radioButtonDijkstra->Checked = false;
+			radioButtonBellmanFord->Checked = false;
+		}
 	private: System::Void btnSelectStartPoint_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		// Отримання вибраного початкового пункту та алгоритму
@@ -393,6 +410,7 @@ namespace Laboratorka2 {
 				// Перехід на наступну форму
 				System::ComponentModel::IContainer^ container = gcnew System::ComponentModel::Container();
 				SecondForm^ secondForm = gcnew SecondForm(container);
+				secondForm->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &MainForm::secondForm_FormClosed);
 				secondForm->SetRouteText(result, Places, sourceVertex, graph); // Встановлення тексту на другій формі
 
 				secondForm->Show();
@@ -406,5 +424,7 @@ namespace Laboratorka2 {
 
 	}
 
-	};
+	private: System::Void groupBoxAlgorithm_Enter(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

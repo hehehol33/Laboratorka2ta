@@ -1,11 +1,5 @@
-﻿  Algorithms.cpp
-  GUI.cpp
-C:\FICT\TA\Labaratorka2\Laboratorka2\Laboratorka2\GUI.h(321,11): warning C4101: 'startPoint': unreferenced local variable
-  (compiling source file 'GUI.cpp')
-  
-C:\FICT\TA\Labaratorka2\Laboratorka2\Laboratorka2\GUI.cpp(41,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  SecondForm.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
-  Generating Code...
+﻿  GUI.cpp
+C:\Users\kseni\source\repos\Laboratorka2ta\Laboratorka2\Laboratorka2\GUI.h(338,11): warning C4101: 'startPoint': unreferenced local variable
+C:\Users\kseni\source\repos\Laboratorka2ta\Laboratorka2\Laboratorka2\GUI.cpp(41,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   Algorithms.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Laboratorka2.vcxproj -> C:\FICT\TA\Labaratorka2\Laboratorka2\x64\Debug\Laboratorka2.exe
+  Laboratorka2.vcxproj -> C:\Users\kseni\Source\Repos\Laboratorka2ta\Laboratorka2\x64\Debug\Laboratorka2.exe
