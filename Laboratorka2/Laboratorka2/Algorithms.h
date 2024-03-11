@@ -1,10 +1,10 @@
 ﻿#pragma once
 #include <iostream> // Подключим пачку зависимостей
-#include <limits>
-#include <string>
-#include <chrono>
+#include <limits> // Эт для максминов
+#include <string> // Строчки строчить
+#include <chrono> // Эт считать драгоценное время
 
-// В cpp комменты алгоритму делал чатик гпт, так чт все в разнобой, и так се наглядность. мб в ходе допила допишу нормальные (если пойму шо как те алгоритмы вообще работают)
+// В cpp уже запилил более детальные комменты, можете читать и становится единым целым с Дейстрой и Беллманом-Фордом
 
 const int V = 11;
   // Да, дубликат, но так уж получилось, что структуре тоже над размерность знать( 
@@ -15,7 +15,7 @@ struct ShortestPathResult { // А вот и наша структура - счи
     double distances[V]; // Сюда пишем расстояния в км (Их вывод над реализовывать)
     int previous[V]; // Шо сюда так и не понял толком, но вещь нужная для вывода маршрутов. Максим обьяснял принцип, но я его забыл :(
     std::string route[V]; // А эт массив строк, в каждую строку пишем всю цепочку ходьбы по точкам
-    long double executiontime;
+    int executiontime; // Сюда пишем время, которое заняло, изначально был тип double, но хроно выдает все равно целочисленное
 };
 
 int MinDistance(double dist[], bool sptSet[]); // Эта считай внутренняя, вызывать ее вам не понадобится
@@ -39,11 +39,9 @@ ShortestPathResult BellmanFord(double graph[V][V], int src);
 //  VertexVibor--;
 //  ShortestPathResult Dijkstra_result = Dijkstra(graph, VertexVibor);
 //  ShortestPathResult BellmanFord_result = BellmanFord(graph, VertexVibor);
-//  PathIntoString(Dijkstra_result, Places, VertexVibor);
-//  PathIntoString(BellmanFord_result, Places, VertexVibor);
+
 
 
 // Первые две строки мы определяем, откуда начнем
 // Второй считаем все алгоритмом
-// Третим считаем маршруты и пишем в стринги 
-// Четвертый и пятый аналогично второму и третьему
+// Четвертый аналогично второму 
