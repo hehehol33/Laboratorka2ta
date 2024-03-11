@@ -117,10 +117,9 @@ private:
         // labelRoute
         // 
         this->labelRoute->ForeColor = System::Drawing::Color::Navy;
-        this->labelRoute->Location = System::Drawing::Point(13, 9);
-        this->labelRoute->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+        this->labelRoute->Location = System::Drawing::Point(10, 7);
         this->labelRoute->Name = L"labelRoute";
-        this->labelRoute->Size = System::Drawing::Size(560, 689);
+        this->labelRoute->Size = System::Drawing::Size(420, 560);
         this->labelRoute->TabIndex = 0;
         this->labelRoute->Text = L"-";
         // 
@@ -128,9 +127,10 @@ private:
         // 
         this->button_back->BackColor = System::Drawing::Color::LightCyan;
         this->button_back->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-        this->button_back->Location = System::Drawing::Point(540, 629);
+        this->button_back->Location = System::Drawing::Point(405, 511);
+        this->button_back->Margin = System::Windows::Forms::Padding(2);
         this->button_back->Name = L"button_back";
-        this->button_back->Size = System::Drawing::Size(86, 43);
+        this->button_back->Size = System::Drawing::Size(64, 35);
         this->button_back->TabIndex = 1;
         this->button_back->Text = L"Назад";
         this->button_back->UseVisualStyleBackColor = false;
@@ -138,13 +138,12 @@ private:
         // 
         // SecondForm
         // 
-        this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+        this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
         this->BackColor = System::Drawing::Color::LightBlue;
-        this->ClientSize = System::Drawing::Size(638, 692);
+        this->ClientSize = System::Drawing::Size(478, 601);
         this->Controls->Add(this->button_back);
         this->Controls->Add(this->labelRoute);
-        this->Margin = System::Windows::Forms::Padding(4);
         this->Name = L"SecondForm";
         this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
         this->Text = L"Result";
