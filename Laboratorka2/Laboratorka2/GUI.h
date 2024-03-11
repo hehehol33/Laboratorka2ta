@@ -95,9 +95,9 @@ namespace Laboratorka2 {
 			this->btnSelectStartPoint->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnSelectStartPoint->ForeColor = System::Drawing::Color::Black;
-			this->btnSelectStartPoint->Location = System::Drawing::Point(422, 194);
+			this->btnSelectStartPoint->Location = System::Drawing::Point(399, 286);
 			this->btnSelectStartPoint->Name = L"btnSelectStartPoint";
-			this->btnSelectStartPoint->Size = System::Drawing::Size(200, 68);
+			this->btnSelectStartPoint->Size = System::Drawing::Size(226, 83);
 			this->btnSelectStartPoint->TabIndex = 0;
 			this->btnSelectStartPoint->Text = L"Знайти найкоротший маршрут";
 			this->btnSelectStartPoint->UseVisualStyleBackColor = false;
@@ -110,9 +110,9 @@ namespace Laboratorka2 {
 			this->groupBoxAlgorithm->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBoxAlgorithm->ForeColor = System::Drawing::SystemColors::Control;
-			this->groupBoxAlgorithm->Location = System::Drawing::Point(402, 22);
+			this->groupBoxAlgorithm->Location = System::Drawing::Point(33, 536);
 			this->groupBoxAlgorithm->Name = L"groupBoxAlgorithm";
-			this->groupBoxAlgorithm->Size = System::Drawing::Size(231, 100);
+			this->groupBoxAlgorithm->Size = System::Drawing::Size(326, 100);
 			this->groupBoxAlgorithm->TabIndex = 1;
 			this->groupBoxAlgorithm->TabStop = false;
 			this->groupBoxAlgorithm->Text = L"Вибір алгоитму";
@@ -174,10 +174,10 @@ namespace Laboratorka2 {
 			this->radioButtonGoldenGate->AutoSize = true;
 			this->radioButtonGoldenGate->Location = System::Drawing::Point(6, 136);
 			this->radioButtonGoldenGate->Name = L"radioButtonGoldenGate";
-			this->radioButtonGoldenGate->Size = System::Drawing::Size(183, 28);
+			this->radioButtonGoldenGate->Size = System::Drawing::Size(132, 28);
 			this->radioButtonGoldenGate->TabIndex = 6;
 			this->radioButtonGoldenGate->TabStop = true;
-			this->radioButtonGoldenGate->Text = L"Михайлівський собор";
+			this->radioButtonGoldenGate->Text = L"Золоті ворота";
 			this->radioButtonGoldenGate->UseVisualStyleBackColor = true;
 			// 
 			// radioButtonStMichaelsCathedral
@@ -185,10 +185,10 @@ namespace Laboratorka2 {
 			this->radioButtonStMichaelsCathedral->AutoSize = true;
 			this->radioButtonStMichaelsCathedral->Location = System::Drawing::Point(6, 96);
 			this->radioButtonStMichaelsCathedral->Name = L"radioButtonStMichaelsCathedral";
-			this->radioButtonStMichaelsCathedral->Size = System::Drawing::Size(132, 28);
+			this->radioButtonStMichaelsCathedral->Size = System::Drawing::Size(183, 28);
 			this->radioButtonStMichaelsCathedral->TabIndex = 5;
 			this->radioButtonStMichaelsCathedral->TabStop = true;
-			this->radioButtonStMichaelsCathedral->Text = L"Золоті ворота";
+			this->radioButtonStMichaelsCathedral->Text = L"Михайлівський собор";
 			this->radioButtonStMichaelsCathedral->UseVisualStyleBackColor = true;
 			// 
 			// radioButtonFountainOnKhreshchatyk
@@ -285,7 +285,7 @@ namespace Laboratorka2 {
 			this->GroupBoxStart->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GroupBoxStart->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->GroupBoxStart->Location = System::Drawing::Point(12, 22);
+			this->GroupBoxStart->Location = System::Drawing::Point(33, 39);
 			this->GroupBoxStart->Name = L"GroupBoxStart";
 			this->GroupBoxStart->Size = System::Drawing::Size(326, 459);
 			this->GroupBoxStart->TabIndex = 17;
@@ -297,12 +297,13 @@ namespace Laboratorka2 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::MidnightBlue;
-			this->ClientSize = System::Drawing::Size(800, 489);
+			this->ClientSize = System::Drawing::Size(665, 737);
 			this->Controls->Add(this->GroupBoxStart);
 			this->Controls->Add(this->groupBoxAlgorithm);
 			this->Controls->Add(this->btnSelectStartPoint);
+			this->Location = System::Drawing::Point(100, 100);
 			this->Name = L"MainForm";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"MainForm";
 			this->Load += gcnew System::EventHandler(this, &MainForm::MainForm_Load);
 			this->groupBoxAlgorithm->ResumeLayout(false);
@@ -313,100 +314,97 @@ namespace Laboratorka2 {
 
 		}
 #pragma endregion
-		private: System::Void SecondForm_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e)
-		{
-			this->Close(); // Закрити MainForm
+
+	private: System::Void btnSelectStartPoint_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		// Отримання вибраного початкового пункту та алгоритму
+		String^ startPoint;
+		String^ algorithm;
+
+		if (radioButtonDijkstra->Checked) {
+			algorithm = "Dijkstra";
 		}
-private: System::Void btnSelectStartPoint_Click(System::Object^ sender, System::EventArgs^ e)
-{
-	// Отримання вибраного початкового пункту та алгоритму
-	String^ startPoint;
-	String^ algorithm;
+		else if (radioButtonBellmanFord->Checked) {
+			algorithm = "Bellman-Ford";
+		}
+		const std::string Places[] = {
+			"Red University",
+			"Andriivska Church",
+			"St. Michael's Cathedral",
+			"Golden Gate",
+			"Lyadski Gate",
+			"Funicular",
+			"KPI",
+			"Fountain on Khreshchatyk",
+			"St. Sophia Cathedral",
+			"National Philharmonic",
+			"One Street Museum"
+		};
 
-	if (radioButtonDijkstra->Checked) {
-		algorithm = "Dijkstra";
-	}
-	else if (radioButtonBellmanFord->Checked) {
-		algorithm = "Bellman-Ford";
-	}
-	const std::string Places[] = {
-		"Red University",
-		"Andriivska Church",
-		"St. Michael's Cathedral",
-		"Golden Gate",
-		"Lyadski Gate",
-		"Funicular",
-		"KPI",
-		"Fountain on Khreshchatyk",
-		"St. Sophia Cathedral",
-		"National Philharmonic",
-		"One Street Museum"
-	};
+		// Виконання алгоритму та виведення результатів
+		if (algorithm != nullptr) {
+			int sourceVertex = -1;
+			// Визначення номера вершини відповідно до вибраного початкового пункту
+			if (radioButtonRedUniversity->Checked) sourceVertex = 0;
+			else if (radioButtonAndriivskaChurch->Checked) sourceVertex = 1;
+			else if (radioButtonStMichaelsCathedral->Checked) sourceVertex = 2;
+			else if (radioButtonGoldenGate->Checked) sourceVertex = 3;
+			else if (radioButtonLyadskiGate->Checked) sourceVertex = 4;
+			else if (radioButtonFunicular->Checked) sourceVertex = 5;
+			else if (radioButtonKPI->Checked) sourceVertex = 6;
+			else if (radioButtonFountainOnKhreshchatyk->Checked) sourceVertex = 7;
+			else if (radioButtonStSophiaCathedral->Checked) sourceVertex = 8;
+			else if (radioButtonNationalPhilharmonic->Checked) sourceVertex = 9;
+			else if (radioButtonOneStreetMuseum->Checked) sourceVertex = 10;
 
-	// Виконання алгоритму та виведення результатів
-	if (algorithm != nullptr) {
-		int sourceVertex = -1;
-		// Визначення номера вершини відповідно до вибраного початкового пункту
-		if (radioButtonRedUniversity->Checked) sourceVertex = 0;
-		else if (radioButtonAndriivskaChurch->Checked) sourceVertex = 1;
-		else if (radioButtonStMichaelsCathedral->Checked) sourceVertex = 2;
-		else if (radioButtonGoldenGate->Checked) sourceVertex = 3;
-		else if (radioButtonLyadskiGate->Checked) sourceVertex = 4;
-		else if (radioButtonFunicular->Checked) sourceVertex = 5;
-		else if (radioButtonKPI->Checked) sourceVertex = 6;
-		else if (radioButtonFountainOnKhreshchatyk->Checked) sourceVertex = 7;
-		else if (radioButtonStSophiaCathedral->Checked) sourceVertex = 8;
-		else if (radioButtonNationalPhilharmonic->Checked) sourceVertex = 9;
-		else if (radioButtonOneStreetMuseum->Checked) sourceVertex = 10;
+			// Виклик алгоритму та отримання результату
+			if (sourceVertex != -1) {
+				double graph[V][V] = {
+					{0, 2, 1.7, 0.9, 0, 2.5, 5, 1, 0, 2.5, 0},
+					{0, 0, 0.6, 1.3, 0, 0, 0, 2, 0.95, 0, 0.6},
+					{1.7, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},
+					{0.9, 1.3, 0, 0, 0, 0, 0, 1, 0.55, 0, 0},
+					{0, 0, 0.5, 0, 0, 0, 0, 1.1, 0, 0, 0},
+					{0, 0, 0, 0, 0, 0, 0, 0, 0, 0.75, 0},
+					{5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+					{1, 2, 0, 0, 1.1, 0, 0, 0, 0, 0, 0},
+					{1.3, 0.95, 0, 0.55, 0.75, 0, 0, 0, 0, 0, 0},
+					{2.3, 0, 0, 0, 0, 0.75, 0, 0, 0, 0, 0},
+					{0, 0.6, 0, 0, 0, 0.8, 0, 0, 0, 0, 0}
+				};
 
-		// Виклик алгоритму та отримання результату
-		if (sourceVertex != -1) {
-			double graph[V][V] = {
-				{0, 2, 1.7, 0.9, 0, 2.5, 5, 1, 0, 2.5, 0},
-				{0, 0, 0.6, 1.3, 0, 0, 0, 2, 0.95, 0, 0.6},
-				{1.7, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},
-				{0.9, 1.3, 0, 0, 0, 0, 0, 1, 0.55, 0, 0},
-				{0, 0, 0.5, 0, 0, 0, 0, 1.1, 0, 0, 0},
-				{0, 0, 0, 0, 0, 0, 0, 0, 0, 0.75, 0},
-				{5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-				{1, 2, 0, 0, 1.1, 0, 0, 0, 0, 0, 0},
-				{1.3, 0.95, 0, 0.55, 0.75, 0, 0, 0, 0, 0, 0},
-				{2.3, 0, 0, 0, 0, 0.75, 0, 0, 0, 0, 0},
-				{0, 0.6, 0, 0, 0, 0.8, 0, 0, 0, 0, 0}
-			};
+				ShortestPathResult result;
+				// Виклик відповідного алгоритму в залежності від вибору
+				if (algorithm == "Dijkstra") {
+					result = Dijkstra(graph, sourceVertex);
+				}
+				else if (algorithm == "Bellman-Ford") {
+					result = BellmanFord(graph, sourceVertex);
+				}
 
-			ShortestPathResult result;
-			// Виклик відповідного алгоритму в залежності від вибору
-			if (algorithm == "Dijkstra") {
-				result = Dijkstra(graph, sourceVertex);
+				// Відображення результатів на формі
+				String^ routeText = "";
+				for (int i = 0; i < V; i++)
+				{
+					routeText += gcnew String(result.route[i].c_str()) + "\n";
+				}
+				labelRoute->Text = routeText;
+
+				// Перехід на наступну форму
+				System::ComponentModel::IContainer^ container = gcnew System::ComponentModel::Container();
+				SecondForm^ secondForm = gcnew SecondForm(container);
+				secondForm->SetRouteText(result, Places, sourceVertex, graph); // Встановлення тексту на другій формі
+
+				secondForm->Show();
+				// Сховати поточну форму
 			}
-			else if (algorithm == "Bellman-Ford") {
-				result = BellmanFord(graph, sourceVertex);
-			}
-
-			// Відображення результатів на формі
-			String^ routeText = "";
-			for (int i = 0; i < V; i++)
-			{
-				routeText += gcnew String(result.route[i].c_str()) + "\n";
-			}
-			labelRoute->Text = routeText;
-
-			// Перехід на наступну форму
-			System::ComponentModel::IContainer^ container = gcnew System::ComponentModel::Container();
-			SecondForm^ secondForm = gcnew SecondForm(container);
-			secondForm->SetRouteText(result,Places, sourceVertex,graph); // Встановлення тексту на другій формі
-			secondForm->FormClosed += gcnew FormClosedEventHandler(this, &MainForm::SecondForm_FormClosed); // Додати обробник подій
-			secondForm->Show();
-			this->Hide(); // Сховати поточну форму
 		}
 	}
-}
 
 
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		
+
 	}
 
-};
+	};
 }

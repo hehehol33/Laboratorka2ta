@@ -65,14 +65,14 @@ public:
                 labelText += "Distance: " + distance.ToString() + "\n";
 
                 // Add separator
-                labelText += "-------------------------------------------------------------------------------------------------\n";
-               
+                labelText += "--------------------------------------------------------------------\n";
+
             }
         }
 
-       
 
-      
+
+
 
         labelText += "\n";
 
@@ -116,10 +116,13 @@ private:
         // 
         // labelRoute
         // 
+        this->labelRoute->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei", 7.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
         this->labelRoute->ForeColor = System::Drawing::Color::Navy;
-        this->labelRoute->Location = System::Drawing::Point(10, 7);
+        this->labelRoute->Location = System::Drawing::Point(10, 9);
+        this->labelRoute->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
         this->labelRoute->Name = L"labelRoute";
-        this->labelRoute->Size = System::Drawing::Size(420, 560);
+        this->labelRoute->Size = System::Drawing::Size(475, 740);
         this->labelRoute->TabIndex = 0;
         this->labelRoute->Text = L"-";
         // 
@@ -127,10 +130,13 @@ private:
         // 
         this->button_back->BackColor = System::Drawing::Color::LightCyan;
         this->button_back->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-        this->button_back->Location = System::Drawing::Point(405, 511);
+        this->button_back->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        this->button_back->ForeColor = System::Drawing::Color::MidnightBlue;
+        this->button_back->Location = System::Drawing::Point(491, 697);
         this->button_back->Margin = System::Windows::Forms::Padding(2);
         this->button_back->Name = L"button_back";
-        this->button_back->Size = System::Drawing::Size(64, 35);
+        this->button_back->Size = System::Drawing::Size(82, 43);
         this->button_back->TabIndex = 1;
         this->button_back->Text = L"Назад";
         this->button_back->UseVisualStyleBackColor = false;
@@ -138,14 +144,18 @@ private:
         // 
         // SecondForm
         // 
-        this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+        this->AutoScaleDimensions = System::Drawing::SizeF(6, 16);
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
         this->BackColor = System::Drawing::Color::LightBlue;
-        this->ClientSize = System::Drawing::Size(478, 601);
+        this->ClientSize = System::Drawing::Size(583, 751);
         this->Controls->Add(this->button_back);
         this->Controls->Add(this->labelRoute);
+        this->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 7.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+            static_cast<System::Byte>(0)));
+        this->Location = System::Drawing::Point(604, 20);
+        this->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
         this->Name = L"SecondForm";
-        this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+        this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
         this->Text = L"Result";
         this->ResumeLayout(false);
 
@@ -155,6 +165,6 @@ private:
 private:
     System::Windows::Forms::Label^ labelRoute;
 private: System::Void button_back_Click(System::Object^ sender, System::EventArgs^ e) {
-    
+    this->Close();
 }
 };
