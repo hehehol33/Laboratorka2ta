@@ -6,7 +6,7 @@ using namespace System::Windows::Forms;
 
 const short rozmir = 11; // Размерность матрицы растояний ? для алгоритма (я хз крч как он работает)
 
-double graph[rozmir][rozmir] = { // Сама матрица магических циферок
+ double graph[rozmir][rozmir] = { // Сама матрица магических циферок
        {0, 2, 1.7, 0.9, 0, 2.5, 5, 1, 0, 2.5, 0},
        {0, 0, 0.6, 1.3, 0, 0, 0, 2, 0.95, 0, 0.6},
        {1.7, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},
@@ -39,12 +39,10 @@ std::string Places[] = { // Упорядоченые названия месте
 [STAThreadAttribute]
 void main(array<String^>^ args)
 {
-    // Без этой хрени форма формой работать не буде
-	Application::EnableVisualStyles();
-	Application::SetCompatibleTextRenderingDefault(false);
-	Laboratorka2::GUI form;
-	Application::Run(% form);
-
+    // Без цієї штуки форма не буде працювати
+    Application::EnableVisualStyles();
+    Application::SetCompatibleTextRenderingDefault(false);
+    Laboratorka2::MainForm form;
+    Application::Run(% form);
 }
-
 
