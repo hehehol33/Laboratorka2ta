@@ -7,6 +7,8 @@
 
 public ref class SecondForm : public System::Windows::Forms::Form
 {
+    delegate void ReturnToPreviousFormDelegate();
+    event ReturnToPreviousFormDelegate^ ReturnToPreviousForm;
 private:
     System::Windows::Forms::Button^ buttonBack;
 
@@ -64,8 +66,13 @@ public:
 
                 // Add separator
                 labelText += "-------------------------------------------------------------------------------------------------\n";
+               
             }
         }
+
+       
+
+      
 
         labelText += "\n";
 
@@ -87,6 +94,15 @@ protected:
             delete components;
         }
     }
+private: System::Windows::Forms::Button^ button_back;
+
+
+
+
+
+
+
+protected:
 
 private:
     System::ComponentModel::Container^ components;
@@ -95,6 +111,7 @@ private:
     void InitializeComponent(void)
     {
         this->labelRoute = (gcnew System::Windows::Forms::Label());
+        this->button_back = (gcnew System::Windows::Forms::Button());
         this->SuspendLayout();
         // 
         // labelRoute
@@ -103,16 +120,29 @@ private:
         this->labelRoute->Location = System::Drawing::Point(13, 9);
         this->labelRoute->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
         this->labelRoute->Name = L"labelRoute";
-        this->labelRoute->Size = System::Drawing::Size(616, 655);
+        this->labelRoute->Size = System::Drawing::Size(560, 689);
         this->labelRoute->TabIndex = 0;
         this->labelRoute->Text = L"-";
+        // 
+        // button_back
+        // 
+        this->button_back->BackColor = System::Drawing::Color::LightCyan;
+        this->button_back->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+        this->button_back->Location = System::Drawing::Point(540, 629);
+        this->button_back->Name = L"button_back";
+        this->button_back->Size = System::Drawing::Size(86, 43);
+        this->button_back->TabIndex = 1;
+        this->button_back->Text = L"Назад";
+        this->button_back->UseVisualStyleBackColor = false;
+        this->button_back->Click += gcnew System::EventHandler(this, &SecondForm::button_back_Click);
         // 
         // SecondForm
         // 
         this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
         this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-        this->BackColor = System::Drawing::Color::PaleTurquoise;
-        this->ClientSize = System::Drawing::Size(660, 673);
+        this->BackColor = System::Drawing::Color::LightBlue;
+        this->ClientSize = System::Drawing::Size(638, 692);
+        this->Controls->Add(this->button_back);
         this->Controls->Add(this->labelRoute);
         this->Margin = System::Windows::Forms::Padding(4);
         this->Name = L"SecondForm";
@@ -125,4 +155,7 @@ private:
 
 private:
     System::Windows::Forms::Label^ labelRoute;
+private: System::Void button_back_Click(System::Object^ sender, System::EventArgs^ e) {
+    
+}
 };

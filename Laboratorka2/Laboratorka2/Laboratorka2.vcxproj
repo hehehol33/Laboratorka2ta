@@ -147,6 +147,9 @@
       <DependentUpon>SecondForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\OneDrive\Изображения\Знімки екрана\граф.bmp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

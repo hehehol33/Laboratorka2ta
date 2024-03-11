@@ -1,4 +1,5 @@
 ﻿#include "Algorithms.h"
+#include <chrono>
 
 int MinDistance(double dist[], bool sptSet[]) {
     double min = std::numeric_limits<double>::max();
@@ -29,9 +30,11 @@ void PathIntoString(ShortestPathResult& result, const std::string Places[]) {
 
 ShortestPathResult Dijkstra(double graph[V][V], int src) {
     ShortestPathResult result;
+    auto start = std::chrono::high_resolution_clock::now();
     double dist[V]; // Array to store the minimum distances from the source to the vertices
     bool sptSet[V]; // Array to store information about whether the vertex is included in the shortest path tree
     int prev[V]; // Array to store the path through the vertices
+    long long executionTime;
 
     // Initialize all distances as "infinity", and vertices in the shortest path tree as "not included"
     for (int i = 0; i < V; i++) {
@@ -55,6 +58,10 @@ ShortestPathResult Dijkstra(double graph[V][V], int src) {
             }
         }
     }
+    auto end = std::chrono::high_resolution_clock::now(); // Кінець вимірювання часу
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start); // Розраховуємо тривалість вимірювання часу
+
+    result.executionTime = duration.count();
 
     // Store the results
     for (int i = 0; i < V; i++) {
@@ -69,7 +76,7 @@ ShortestPathResult Dijkstra(double graph[V][V], int src) {
 
 ShortestPathResult BellmanFord(double graph[V][V], int src) {
     ShortestPathResult result;
-
+    
     double dist[V]; // Масив для зберігання мінімальних відстаней від джерела до вершин
     int prev[V];    // Масив для зберігання попередніх вершин у шляху
 
@@ -93,7 +100,7 @@ ShortestPathResult BellmanFord(double graph[V][V], int src) {
                 }
             }
         }
-    }
+    }  
 
     // Зберігаємо результати в структурі
     for (int i = 0; i < V; i++) {

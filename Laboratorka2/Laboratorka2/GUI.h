@@ -56,6 +56,11 @@ namespace Laboratorka2 {
 
 	private: System::Windows::Forms::GroupBox^ GroupBoxStart;
 
+
+
+
+
+
 	private:
 		System::ComponentModel::Container^ components;
 
@@ -85,12 +90,12 @@ namespace Laboratorka2 {
 			// 
 			// btnSelectStartPoint
 			// 
-			this->btnSelectStartPoint->BackColor = System::Drawing::Color::MidnightBlue;
+			this->btnSelectStartPoint->BackColor = System::Drawing::Color::CornflowerBlue;
 			this->btnSelectStartPoint->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnSelectStartPoint->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnSelectStartPoint->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnSelectStartPoint->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->btnSelectStartPoint->Location = System::Drawing::Point(396, 194);
+			this->btnSelectStartPoint->ForeColor = System::Drawing::Color::Black;
+			this->btnSelectStartPoint->Location = System::Drawing::Point(422, 194);
 			this->btnSelectStartPoint->Name = L"btnSelectStartPoint";
 			this->btnSelectStartPoint->Size = System::Drawing::Size(200, 68);
 			this->btnSelectStartPoint->TabIndex = 0;
@@ -105,9 +110,9 @@ namespace Laboratorka2 {
 			this->groupBoxAlgorithm->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBoxAlgorithm->ForeColor = System::Drawing::SystemColors::Control;
-			this->groupBoxAlgorithm->Location = System::Drawing::Point(396, 12);
+			this->groupBoxAlgorithm->Location = System::Drawing::Point(402, 22);
 			this->groupBoxAlgorithm->Name = L"groupBoxAlgorithm";
-			this->groupBoxAlgorithm->Size = System::Drawing::Size(210, 100);
+			this->groupBoxAlgorithm->Size = System::Drawing::Size(231, 100);
 			this->groupBoxAlgorithm->TabIndex = 1;
 			this->groupBoxAlgorithm->TabStop = false;
 			this->groupBoxAlgorithm->Text = L"Вибір алгоитму";
@@ -291,7 +296,7 @@ namespace Laboratorka2 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::DarkSlateBlue;
+			this->BackColor = System::Drawing::Color::MidnightBlue;
 			this->ClientSize = System::Drawing::Size(800, 489);
 			this->Controls->Add(this->GroupBoxStart);
 			this->Controls->Add(this->groupBoxAlgorithm);
@@ -400,6 +405,7 @@ private: System::Void btnSelectStartPoint_Click(System::Object^ sender, System::
 
 
 	private: System::Void MainForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		
 	}
 
 };
