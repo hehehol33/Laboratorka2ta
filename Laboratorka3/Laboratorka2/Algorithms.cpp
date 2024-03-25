@@ -47,6 +47,16 @@ ShortestPathResult Graph::BellmanFord(int src) {
             }
         }
     }
+    auto end = std::chrono::high_resolution_clock::now(); // Заканчиваем считать время
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start); // Вычитаем времячко
+    execution_time = (duration.count() / 1000); // Пишем в переменную внутри структуры
+
+    // Пишем результаты в структуру
+    for (int i = 0; i < V; i++) {
+        result.distances[i] = dist[i];
+        result.previous[i] = prev[i];
+
+    }
     return result;
 }
 
@@ -83,7 +93,7 @@ ShortestPathResult Graph::Dijkstra(int src) {
     }
     auto end = std::chrono::high_resolution_clock::now(); // Заканчиваем считать время
     auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start); // Вычитаем времячко
-    result.executiontime = (duration.count() / 1000); // Пишем в переменную внутри структуры
+    execution_time = (duration.count() / 1000); // Пишем в переменную внутри структуры
 
     // Пишем результаты в структуру
     for (int i = 0; i < V; i++) {
@@ -95,6 +105,7 @@ ShortestPathResult Graph::Dijkstra(int src) {
 }
 
 string Graph::SccKosaraju() {
+    auto start = std::chrono::high_resolution_clock::now();
     ShortestPathResult result;
     string sccs; // Змінна для зберігання всіх з'єднаних рядків
     stack<int> Stack;
@@ -123,11 +134,14 @@ string Graph::SccKosaraju() {
             sccs += result; // Додаємо поточний рядок до sccs
         }
     }
-
+    auto end = std::chrono::high_resolution_clock::now(); // Заканчиваем считать время
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start); // Вычитаем времячко
+    execution_time = (duration.count() / 1000); // Пишем в переменную внутри структуры
     return sccs;
 }
 
 string Graph::SccTarjan() {
+    auto start = std::chrono::high_resolution_clock::now();
     string sccs; // Змінна для зберігання всіх з'єднаних рядків
     vector<int> disc(V, -1), low(V, -1);
     stack<int> st;
@@ -139,7 +153,9 @@ string Graph::SccTarjan() {
             tarjanDFS(i, disc, low, st, stackMember, sccs, time);
         }
     }
-
+    auto end = std::chrono::high_resolution_clock::now(); // Заканчиваем считать время
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start); // Вычитаем времячко
+    execution_time = (duration.count() / 1000); // Пишем в переменную внутри структуры
     return sccs;
 }
 
@@ -218,4 +234,8 @@ int Graph::MinDistance(double dist[], bool sptSet[]) { // Считаем как�
         }
     }
     return minIndex; // Берем его и идем хвастать назад в Дейкстру 
+}
+
+int Graph::GetTime() { // Возвращает время в микросекундах
+    return execution_time;
 }

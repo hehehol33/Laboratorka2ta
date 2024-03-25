@@ -1,6 +1,5 @@
 ﻿#pragma once
 
-
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -23,13 +22,14 @@ struct ShortestPathResult { // А вот и наша структура - счи
     // Позволяет за раз вернуть пачку данных с функции, да и в целом удобная штука, чтоб лишний раз не городить огороды (гыгы, тавтология)
     double distances[rozmir]; // Сюда пишем расстояния в км (Их вывод над реализовывать)
     int previous[rozmir]; // Шо сюда так и не понял толком, но вещь нужная для вывода маршрутов. Максим обьяснял принцип, но я его забыл :(
-    int executiontime; // Сюда пишем время, которое заняло, изначально был тип double, но хроно выдает все равно целочисленное
+    
 };
 
 
 class Graph {
 private:
     short V; // Размерность
+    int execution_time = 0; // Время, затраченное на исполнение
     std::vector<std::vector<int>> adj; // Граф вектором пишем
     double graph[rozmir][rozmir]; // Матрица наша
 
@@ -47,6 +47,7 @@ public:
     ShortestPathResult Dijkstra(int src);
     std::string SccKosaraju();
     std::string SccTarjan();
+    int GetTime(); // Выводит время в микросеках
 };
 
 
