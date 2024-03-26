@@ -1,36 +1,13 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Laboratorka2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Algorithms.cpp
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(52,40): warning C4244: '=': conversion from '_Rep' to 'int', possible loss of data
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(52,40): warning C4244:         with
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(52,40): warning C4244:         [
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(52,40): warning C4244:             _Rep=__int64
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(52,40): warning C4244:         ]
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(96,40): warning C4244: '=': conversion from '_Rep' to 'int', possible loss of data
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(96,40): warning C4244:         with
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(96,40): warning C4244:         [
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(96,40): warning C4244:             _Rep=__int64
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(96,40): warning C4244:         ]
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(139,40): warning C4244: '=': conversion from '_Rep' to 'int', possible loss of data
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(139,40): warning C4244:         with
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(139,40): warning C4244:         [
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(139,40): warning C4244:             _Rep=__int64
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(139,40): warning C4244:         ]
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(109,24): warning C4101: 'result': unreferenced local variable
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(158,40): warning C4244: '=': conversion from '_Rep' to 'int', possible loss of data
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(158,40): warning C4244:         with
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(158,40): warning C4244:         [
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(158,40): warning C4244:             _Rep=__int64
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\Algorithms.cpp(158,40): warning C4244:         ]
   GUI.cpp
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\GUI.h(461,11): warning C4101: 'startPoint': unreferenced local variable
+C:\Users\kseni\source\repos\TA_labs\Laboratorka3\Laboratorka2\GUI.h(461,11): warning C4101: 'startPoint': unreferenced local variable
   (compiling source file 'GUI.cpp')
   
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\GUI.h(495,23): warning C4101: 'result': unreferenced local variable
+C:\Users\kseni\source\repos\TA_labs\Laboratorka3\Laboratorka2\GUI.h(496,23): warning C4101: 'result': unreferenced local variable
   (compiling source file 'GUI.cpp')
   
-C:\FICT\TA\Labaratorka2\Laboratorka3\Laboratorka2\GUI.cpp(41,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+C:\Users\kseni\source\repos\TA_labs\Laboratorka3\Laboratorka2\GUI.cpp(41,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   SecondForm.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
   Generating Code...
   Algorithms.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Laboratorka2.vcxproj -> C:\FICT\TA\Labaratorka2\Laboratorka3\x64\Debug\Laboratorka3.exe
+  Laboratorka2.vcxproj -> C:\Users\kseni\Source\Repos\TA_labs\Laboratorka3\x64\Debug\Laboratorka3.exe

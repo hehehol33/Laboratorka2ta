@@ -19,7 +19,7 @@ Class Laboratorka2.SecondForm: AutoLayout, AnsiClass, Class, Public, BeforeField
   :System.Windows.Forms.Form
     Void .ctor(System.ComponentModel.IContainer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
-    SetRouteText(String, String): PrivateScope, Public, HideBySig
+    SetRouteText(String, String, Int32): PrivateScope, Public, HideBySig
 Class Laboratorka2.Main: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

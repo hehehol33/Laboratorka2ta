@@ -118,10 +118,10 @@ namespace Laboratorka2 {
 			// 
 			this->btnSelectStartPoint->BackColor = System::Drawing::Color::CornflowerBlue;
 			this->btnSelectStartPoint->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btnSelectStartPoint->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnSelectStartPoint->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnSelectStartPoint->ForeColor = System::Drawing::Color::Black;
-			this->btnSelectStartPoint->Location = System::Drawing::Point(400, 299);
+			this->btnSelectStartPoint->Location = System::Drawing::Point(398, 285);
 			this->btnSelectStartPoint->Name = L"btnSelectStartPoint";
 			this->btnSelectStartPoint->Size = System::Drawing::Size(226, 83);
 			this->btnSelectStartPoint->TabIndex = 0;
@@ -133,7 +133,7 @@ namespace Laboratorka2 {
 			// 
 			this->groupBoxAlgorithm->Controls->Add(this->radioButtonTarjan);
 			this->groupBoxAlgorithm->Controls->Add(this->radioButtonKosaraju);
-			this->groupBoxAlgorithm->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->groupBoxAlgorithm->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBoxAlgorithm->ForeColor = System::Drawing::SystemColors::Control;
 			this->groupBoxAlgorithm->Location = System::Drawing::Point(33, 536);
@@ -148,7 +148,7 @@ namespace Laboratorka2 {
 			this->radioButtonTarjan->AutoSize = true;
 			this->radioButtonTarjan->Location = System::Drawing::Point(21, 54);
 			this->radioButtonTarjan->Name = L"radioButtonTarjan";
-			this->radioButtonTarjan->Size = System::Drawing::Size(88, 28);
+			this->radioButtonTarjan->Size = System::Drawing::Size(100, 24);
 			this->radioButtonTarjan->TabIndex = 1;
 			this->radioButtonTarjan->TabStop = true;
 			this->radioButtonTarjan->Text = L"Тарйана";
@@ -159,7 +159,7 @@ namespace Laboratorka2 {
 			this->radioButtonKosaraju->AutoSize = true;
 			this->radioButtonKosaraju->Location = System::Drawing::Point(21, 27);
 			this->radioButtonKosaraju->Name = L"radioButtonKosaraju";
-			this->radioButtonKosaraju->Size = System::Drawing::Size(109, 28);
+			this->radioButtonKosaraju->Size = System::Drawing::Size(122, 24);
 			this->radioButtonKosaraju->TabIndex = 0;
 			this->radioButtonKosaraju->TabStop = true;
 			this->radioButtonKosaraju->Text = L"Косараджу";
@@ -171,7 +171,7 @@ namespace Laboratorka2 {
 			this->labelRoute->Enabled = false;
 			this->labelRoute->Location = System::Drawing::Point(58, 172);
 			this->labelRoute->Name = L"labelRoute";
-			this->labelRoute->Size = System::Drawing::Size(0, 24);
+			this->labelRoute->Size = System::Drawing::Size(0, 20);
 			this->labelRoute->TabIndex = 2;
 			this->labelRoute->Visible = false;
 			// 
@@ -266,7 +266,7 @@ namespace Laboratorka2 {
 			// radioButtonOneStreetMuseum
 			// 
 			this->radioButtonOneStreetMuseum->Enabled = false;
-			this->radioButtonOneStreetMuseum->Location = System::Drawing::Point(21, 433);
+			this->radioButtonOneStreetMuseum->Location = System::Drawing::Point(21, 427);
 			this->radioButtonOneStreetMuseum->Name = L"radioButtonOneStreetMuseum";
 			this->radioButtonOneStreetMuseum->Size = System::Drawing::Size(10, 10);
 			this->radioButtonOneStreetMuseum->TabIndex = 15;
@@ -277,7 +277,7 @@ namespace Laboratorka2 {
 			// radioButtonNationalPhilharmonic
 			// 
 			this->radioButtonNationalPhilharmonic->Enabled = false;
-			this->radioButtonNationalPhilharmonic->Location = System::Drawing::Point(21, 394);
+			this->radioButtonNationalPhilharmonic->Location = System::Drawing::Point(21, 388);
 			this->radioButtonNationalPhilharmonic->Name = L"radioButtonNationalPhilharmonic";
 			this->radioButtonNationalPhilharmonic->Size = System::Drawing::Size(10, 10);
 			this->radioButtonNationalPhilharmonic->TabIndex = 14;
@@ -321,7 +321,7 @@ namespace Laboratorka2 {
 			this->GroupBoxStart->Controls->Add(this->radioButtonKPI);
 			this->GroupBoxStart->Controls->Add(this->radioButtonFunicular);
 			this->GroupBoxStart->Controls->Add(this->radioButtonAndriivskaChurch);
-			this->GroupBoxStart->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->GroupBoxStart->Font = (gcnew System::Drawing::Font(L"Imprint MT Shadow", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GroupBoxStart->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->GroupBoxStart->Location = System::Drawing::Point(33, 39);
@@ -336,7 +336,7 @@ namespace Laboratorka2 {
 			this->label11->AutoSize = true;
 			this->label11->Location = System::Drawing::Point(17, 419);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(170, 24);
+			this->label11->Size = System::Drawing::Size(189, 20);
 			this->label11->TabIndex = 40;
 			this->label11->Text = L"11.Музей однієї вулиці";
 			// 
@@ -345,16 +345,16 @@ namespace Laboratorka2 {
 			this->label7->AutoSize = true;
 			this->label7->Location = System::Drawing::Point(17, 260);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(49, 24);
+			this->label7->Size = System::Drawing::Size(50, 20);
 			this->label7->TabIndex = 38;
 			this->label7->Text = L"7.КПІ";
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(17, 380);
+			this->label10->Location = System::Drawing::Point(17, 379);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(207, 24);
+			this->label10->Size = System::Drawing::Size(236, 20);
 			this->label10->TabIndex = 39;
 			this->label10->Text = L"10.Національна філармонія";
 			// 
@@ -363,7 +363,7 @@ namespace Laboratorka2 {
 			this->label9->AutoSize = true;
 			this->label9->Location = System::Drawing::Point(17, 338);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(157, 24);
+			this->label9->Size = System::Drawing::Size(175, 20);
 			this->label9->TabIndex = 37;
 			this->label9->Text = L"9.Софійський собор";
 			// 
@@ -372,7 +372,7 @@ namespace Laboratorka2 {
 			this->label8->AutoSize = true;
 			this->label8->Location = System::Drawing::Point(17, 297);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(179, 24);
+			this->label8->Size = System::Drawing::Size(209, 20);
 			this->label8->TabIndex = 36;
 			this->label8->Text = L"8.Фонтан на Хрещатику";
 			// 
@@ -381,7 +381,7 @@ namespace Laboratorka2 {
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(17, 220);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(96, 24);
+			this->label6->Size = System::Drawing::Size(107, 20);
 			this->label6->TabIndex = 35;
 			this->label6->Text = L"6.Фунікулер";
 			// 
@@ -390,7 +390,7 @@ namespace Laboratorka2 {
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(17, 181);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(134, 24);
+			this->label5->Size = System::Drawing::Size(152, 20);
 			this->label5->TabIndex = 34;
 			this->label5->Text = L"5.Лядські ворота";
 			// 
@@ -399,7 +399,7 @@ namespace Laboratorka2 {
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(17, 143);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(126, 24);
+			this->label4->Size = System::Drawing::Size(142, 20);
 			this->label4->TabIndex = 33;
 			this->label4->Text = L"4.Золоті ворота";
 			// 
@@ -408,7 +408,7 @@ namespace Laboratorka2 {
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(17, 104);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(177, 24);
+			this->label3->Size = System::Drawing::Size(199, 20);
 			this->label3->TabIndex = 32;
 			this->label3->Text = L"3.Михайлівський собор";
 			// 
@@ -417,7 +417,7 @@ namespace Laboratorka2 {
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(17, 64);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(158, 24);
+			this->label2->Size = System::Drawing::Size(187, 20);
 			this->label2->TabIndex = 31;
 			this->label2->Text = L"2.Андріївська церква";
 			// 
@@ -426,7 +426,7 @@ namespace Laboratorka2 {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(17, 24);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(168, 24);
+			this->label1->Size = System::Drawing::Size(198, 20);
 			this->label1->TabIndex = 30;
 			this->label1->Text = L"1.Червоний унівеситет";
 			// 
@@ -435,7 +435,7 @@ namespace Laboratorka2 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::MidnightBlue;
-			this->ClientSize = System::Drawing::Size(665, 737);
+			this->ClientSize = System::Drawing::Size(665, 673);
 			this->Controls->Add(this->GroupBoxStart);
 			this->Controls->Add(this->groupBoxAlgorithm);
 			this->Controls->Add(this->btnSelectStartPoint);
@@ -492,6 +492,7 @@ namespace Laboratorka2 {
 
 			Graph g(rozmir);
 			g.addTable(graph);
+
 			ShortestPathResult result;
 			// Виклик відповідного алгоритму в залежності від вибору
 			if (algorithm == "Kosaraju") {
@@ -509,26 +510,25 @@ namespace Laboratorka2 {
 			else if (algorithm == "Tarjan") {
 				labelRoute->Text = sccTarjanResult;
 			}
-
+			int execution_time = g.GetTime();
 			// Перехід на наступну форму
+			 // Отримання часу виконання з графа
 			System::ComponentModel::IContainer^ container = gcnew System::ComponentModel::Container();
 			SecondForm^ secondForm = gcnew SecondForm(container);
 			secondForm->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &Main::secondForm_FormClosed);
 			if (algorithm == "Kosaraju") {
-				secondForm->SetRouteText(sccKosarajuResult, algorithm);
+				secondForm->SetRouteText(sccKosarajuResult, algorithm, execution_time);
 			}
 			else if (algorithm == "Tarjan") {
-				secondForm->SetRouteText(sccTarjanResult, algorithm);
+				secondForm->SetRouteText(sccTarjanResult, algorithm, execution_time);
 			}
-				secondForm->Show();
-				// Сховати поточну форму
-			}
+			secondForm->Show();
+			// Сховати поточну форму
 		}
+	}
 	};
 
 
 
 }
-	
-
 
