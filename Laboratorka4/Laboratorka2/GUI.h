@@ -40,6 +40,9 @@ namespace Laboratorka4 {
 	private: System::Windows::Forms::Button^ button_arr;
 	private: System::Windows::Forms::Button^ button_point;
 	private: System::Windows::Forms::Button^ button_clean;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label_time1;
+	private: System::Windows::Forms::Label^ label_time2;
 
 
 
@@ -79,6 +82,9 @@ namespace Laboratorka4 {
 			this->button_arr = (gcnew System::Windows::Forms::Button());
 			this->button_point = (gcnew System::Windows::Forms::Button());
 			this->button_clean = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label_time1 = (gcnew System::Windows::Forms::Label());
+			this->label_time2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// listBox1
@@ -88,9 +94,9 @@ namespace Laboratorka4 {
 			this->listBox1->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->listBox1->FormattingEnabled = true;
 			this->listBox1->ItemHeight = 16;
-			this->listBox1->Location = System::Drawing::Point(25, 62);
+			this->listBox1->Location = System::Drawing::Point(25, 81);
 			this->listBox1->Name = L"listBox1";
-			this->listBox1->Size = System::Drawing::Size(411, 644);
+			this->listBox1->Size = System::Drawing::Size(423, 612);
 			this->listBox1->TabIndex = 0;
 			// 
 			// listBox2
@@ -100,9 +106,9 @@ namespace Laboratorka4 {
 			this->listBox2->ForeColor = System::Drawing::SystemColors::InfoText;
 			this->listBox2->FormattingEnabled = true;
 			this->listBox2->ItemHeight = 16;
-			this->listBox2->Location = System::Drawing::Point(477, 62);
+			this->listBox2->Location = System::Drawing::Point(474, 81);
 			this->listBox2->Name = L"listBox2";
-			this->listBox2->Size = System::Drawing::Size(410, 644);
+			this->listBox2->Size = System::Drawing::Size(417, 612);
 			this->listBox2->TabIndex = 1;
 			// 
 			// button_arr
@@ -146,13 +152,47 @@ namespace Laboratorka4 {
 			this->button_clean->UseVisualStyleBackColor = false;
 			this->button_clean->Click += gcnew System::EventHandler(this, &MainForm::button_clean_Click);
 			// 
+			// label1
+			// 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label1->Location = System::Drawing::Point(19, 26);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(821, 34);
+			this->label1->TabIndex = 5;
+			this->label1->Text = L"Порівняння реалізацій абстрактних типів даних";
+			// 
+			// label_time1
+			// 
+			this->label_time1->AutoSize = true;
+			this->label_time1->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label_time1->Location = System::Drawing::Point(31, 707);
+			this->label_time1->Name = L"label_time1";
+			this->label_time1->Size = System::Drawing::Size(11, 16);
+			this->label_time1->TabIndex = 6;
+			this->label_time1->Text = L"-";
+			// 
+			// label_time2
+			// 
+			this->label_time2->AutoSize = true;
+			this->label_time2->ForeColor = System::Drawing::SystemColors::ButtonFace;
+			this->label_time2->Location = System::Drawing::Point(486, 707);
+			this->label_time2->Name = L"label_time2";
+			this->label_time2->Size = System::Drawing::Size(11, 16);
+			this->label_time2->TabIndex = 7;
+			this->label_time2->Text = L"-";
+			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(102)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
 				static_cast<System::Int32>(static_cast<System::Byte>(153)));
-			this->ClientSize = System::Drawing::Size(1082, 737);
+			this->ClientSize = System::Drawing::Size(1082, 752);
+			this->Controls->Add(this->label_time2);
+			this->Controls->Add(this->label_time1);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button_clean);
 			this->Controls->Add(this->button_point);
 			this->Controls->Add(this->button_arr);
@@ -163,6 +203,7 @@ namespace Laboratorka4 {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"Result";
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion

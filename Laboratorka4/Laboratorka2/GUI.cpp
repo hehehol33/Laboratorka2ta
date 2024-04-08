@@ -44,7 +44,7 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
         totalTime += names.ExecTime();
     }
 
-    listBox1->Items->Add("Execution Time: " + totalTime.ToString() + "ns");
+    label_time1->Text = "Execution Time: " + totalTime.ToString() + "ns";
     
 
     totalTime = 0;
@@ -67,7 +67,7 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
         totalTime += names.ExecTime();
     }
 
-    listBox2->Items->Add("Execution Time: " + totalTime.ToString() + "ns");
+    label_time2->Text = "Execution Time: " + totalTime.ToString() + "ns";
     
 }
 
@@ -97,7 +97,8 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
             totalTime += names.ExecTime();
         }
 
-        listBox1->Items->Add("Execution Time: " + totalTime.ToString() + "ns");
+       
+        label_time1->Text = "Execution Time: " + totalTime.ToString() + "ns";
         
     
          totalTime = 0;
@@ -122,12 +123,13 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
             totalTime += names.ExecTime();
         }
 
-        listBox2->Items->Add("Execution Time: " + totalTime.ToString() + "ns");
-        
+        label_time2->Text = "Execution Time: " + totalTime.ToString() + "ns";
 }
 
 System::Void Laboratorka4::MainForm::button_clean_Click(System::Object^ sender, System::EventArgs^ e)
 {
     listBox1->Items->Clear();
     listBox2->Items->Clear();
+    label_time2->Text = "";
+    label_time1->Text = "";
 }
