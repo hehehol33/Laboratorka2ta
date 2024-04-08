@@ -92,7 +92,7 @@ void NodeQueue::measureExecutionTime(Func&& func) {
     exec_time = static_cast<unsigned int>(duration.count());
 }
 
-void NodeQueue::Enqueue(unsigned short element) {
+void NodeQueue::Enqueue(unsigned short& element) {
     measureExecutionTime([this, &element] {
         Node* newNode = new Node(element);
         if (head == nullptr) {

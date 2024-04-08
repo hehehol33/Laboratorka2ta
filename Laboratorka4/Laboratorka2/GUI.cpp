@@ -25,11 +25,8 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
     ArrQueue names;
     unsigned long int totalTime = 0;
 
-    for (int i = 1; i <= QUEUE_SIZE; ++i) {
-        String^ message = "The teacher is checking assignment " + i.ToString();
-        listBox1->Items->Add(message);
+    for (unsigned short i = 1; i <= QUEUE_SIZE; ++i) {
         
-
         names.Enqueue(i);
         std::string queueOutput = "Queue: ";
         unsigned short queueSize = names.getSize();
@@ -38,10 +35,14 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
             queueOutput += std::to_string(queueArray[j]) + " ";
         }
 
+        totalTime += names.ExecTime();
+
+        String^ message = "The teacher is checking assignment " + i.ToString();
+        listBox1->Items->Add(message);
         listBox1->Items->Add(gcnew System::String(queueOutput.c_str()));
         
 
-        totalTime += names.ExecTime();
+        
     }
 
     label_time1->Text = "Execution Time: " + totalTime.ToString() + "ns";
@@ -49,11 +50,10 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
 
     totalTime = 0;
 
-    for (int i = 1; i <= QUEUE_SIZE; ++i) {
+    for (unsigned short i = 1; i <= QUEUE_SIZE; ++i) {
         unsigned short removed_item = names.Dequeue();
 
-        String^ message = "Assignments marked in Campus: " + System::Convert::ToString(removed_item);
-        listBox2->Items->Add(message);
+        
         std::string queueOutput = "Queue: ";
         unsigned short queueSize = names.getSize();
         unsigned short* queueArray = names.GetQueue();
@@ -61,10 +61,14 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
             queueOutput += std::to_string(queueArray[j]) + " ";
         }
 
+        totalTime += names.ExecTime();
+
+        String^ message = "Assignments marked in Campus: " + System::Convert::ToString(removed_item);
+        listBox2->Items->Add(message);
         listBox2->Items->Add(gcnew System::String(queueOutput.c_str()));
         
 
-        totalTime += names.ExecTime();
+        
     }
 
     label_time2->Text = "Execution Time: " + totalTime.ToString() + "ns";
@@ -78,11 +82,7 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
         NodeQueue names;
         unsigned long int totalTime = 0;
 
-        for (int i = 1; i <= QUEUE_SIZE; ++i) {
-            String^ message = "The teacher is checking assignment " + i.ToString();
-            listBox1->Items->Add(message);
-            
-
+        for (unsigned short i = 1; i <= QUEUE_SIZE; ++i) {           
             names.Enqueue(i);
             std::string queueOutput = "Queue: ";
             unsigned short queueSize = names.getSize();
@@ -91,25 +91,21 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
                 queueOutput += std::to_string(queueArray[j]) + " ";
             }
 
-            listBox1->Items->Add(gcnew System::String(queueOutput.c_str()));
-            
-
             totalTime += names.ExecTime();
+
+            String^ message = "The teacher is checking assignment " + i.ToString();
+            listBox1->Items->Add(message);
+            listBox1->Items->Add(gcnew System::String(queueOutput.c_str()));
         }
 
        
         label_time1->Text = "Execution Time: " + totalTime.ToString() + "ns";
         
     
-         totalTime = 0;
+        totalTime = 0;
 
-        for (int i = 1; i <= QUEUE_SIZE; ++i) {
+        for (unsigned short i = 1; i <= QUEUE_SIZE; ++i) {
             unsigned short removed_item = names.Dequeue();
-
-            String^ message = "Assignments marked in Campus: " + System::Convert::ToString(removed_item);
-            listBox2->Items->Add(message);
-            
-
             std::string queueOutput = "Queue: ";
             unsigned short queueSize = names.getSize();
             unsigned short* queueArray = names.GetQueue();
@@ -117,10 +113,14 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
                 queueOutput += std::to_string(queueArray[j]) + " ";
             }
 
+            totalTime += names.ExecTime();
+
+            String^ message = "Assignments marked in Campus: " + System::Convert::ToString(removed_item);
+            listBox2->Items->Add(message);
             listBox2->Items->Add(gcnew System::String(queueOutput.c_str()));
             
 
-            totalTime += names.ExecTime();
+            
         }
 
         label_time2->Text = "Execution Time: " + totalTime.ToString() + "ns";

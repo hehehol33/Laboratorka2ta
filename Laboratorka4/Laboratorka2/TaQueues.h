@@ -46,7 +46,7 @@ private:
     void measureExecutionTime(Func&& func);
 
 public:
-    void Enqueue(unsigned short element); // Добавляем, коль уж соизволите
+    void Enqueue(unsigned short& element); // Добавляем, коль уж соизволите
     unsigned short Dequeue(); // Бог дал, Бог взял, и говорит что именно
     unsigned short* GetQueue(); // Собирает очередь в массив и возврщает его, чтоб можно было пользовать нормально, а не просить фронт е**тся с пачкой указателей
     void ShowQueue(); // Для консося вывод, в теории на его базе можно собрать быренький вывод для форм, но ну его лесом
