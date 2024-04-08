@@ -3,7 +3,7 @@
 // Queue methods implementation
 
 template<typename Func>
-void QueueArr::measureExecutionTime(Func&& func) {
+void ArrQueue::measureExecutionTime(Func&& func) {
     auto start = std::chrono::high_resolution_clock::now();
     func();
     auto end = std::chrono::high_resolution_clock::now();
@@ -11,74 +11,74 @@ void QueueArr::measureExecutionTime(Func&& func) {
     exec_time = static_cast<unsigned int>(duration.count());
 }
 
-QueueArr::QueueArr() {
+ArrQueue::ArrQueue() {
     measureExecutionTime([this] {
         queue_size = 0;
-        String_queue = new std::string[queue_size];
+        Shrt_queue = new unsigned short[queue_size];
         });
 }
 
-void QueueArr::Enqueue(const std::string& entity) {
+void ArrQueue::Enqueue(const unsigned short& entity) {
     measureExecutionTime([this, &entity] {
-        std::string* Temp_queue = new std::string[queue_size + 1];
+        unsigned short* Temp_queue = new unsigned short[queue_size + 1];
         for (unsigned short i = 0; i < queue_size; i++) {
-            Temp_queue[i] = String_queue[i];
+            Temp_queue[i] = Shrt_queue[i];
         }
         Temp_queue[queue_size] = entity;
-        delete[] String_queue;
-        String_queue = Temp_queue;
+        delete[] Shrt_queue;
+        Shrt_queue = Temp_queue;
         queue_size++;
         });
 }
 
-std::string QueueArr::Dequeue() {
-    std::string value;
+unsigned short ArrQueue::Dequeue() {
+    unsigned short value;
     measureExecutionTime([this, &value] {
         if (queue_size > 0) {
             unsigned short temp_size = queue_size;
-            std::string* Temp_queue = new std::string[temp_size];
+            unsigned short* Temp_queue = new unsigned short[temp_size];
             for (unsigned short i = 1; i < queue_size; i++) {
-                Temp_queue[i - 1] = String_queue[i];
+                Temp_queue[i - 1] = Shrt_queue[i];
             }
-            value = String_queue[0];
-            delete[] String_queue;
-            String_queue = Temp_queue;
+            value = Shrt_queue[0];
+            delete[] Shrt_queue;
+            Shrt_queue = Temp_queue;
             queue_size--;
         }
         });
     return value;
 }
 
-void QueueArr::ShowQueue() {
+void ArrQueue::ShowQueue() {
     measureExecutionTime([this] {
         for (unsigned short i = 0; i < queue_size; i++) {
-            std::cout << String_queue[i] << " ";
+            std::cout << Shrt_queue[i] << "\n";
         }
         std::cout << "\n";
         });
 }
 
-unsigned int QueueArr::ExecTime() const {
+unsigned int ArrQueue::ExecTime() const {
     return exec_time;
 }
 
-std::string* QueueArr::GetQueue() {
-    std::string* copyQueue = nullptr;
+unsigned short* ArrQueue::GetQueue() {
+    unsigned short* copyQueue = nullptr;
     measureExecutionTime([this, &copyQueue] {
-        copyQueue = new std::string[queue_size];
+        copyQueue = new unsigned short[queue_size];
         for (unsigned short i = 0; i < queue_size; ++i) {
-            copyQueue[i] = String_queue[i];
+            copyQueue[i] = Shrt_queue[i];
         }
         });
     return copyQueue;
 }
 
-unsigned short QueueArr::getSize() {
+unsigned short ArrQueue::getSize() {
     return queue_size;
 }
 
-QueueArr::~QueueArr() {
-    delete[] String_queue;
+ArrQueue::~ArrQueue() {
+    delete[] Shrt_queue;
 }
 
 // NodeQueue methods implementation
@@ -92,7 +92,7 @@ void NodeQueue::measureExecutionTime(Func&& func) {
     exec_time = static_cast<unsigned int>(duration.count());
 }
 
-void NodeQueue::Enqueue(std::string element) {
+void NodeQueue::Enqueue(unsigned short element) {
     measureExecutionTime([this, &element] {
         Node* newNode = new Node(element);
         if (head == nullptr) {
@@ -106,8 +106,8 @@ void NodeQueue::Enqueue(std::string element) {
         });
 }
 
-std::string NodeQueue::Dequeue() {
-    std::string value;
+unsigned short NodeQueue::Dequeue() {
+    unsigned short value;
     measureExecutionTime([this, &value] {
         if (head == nullptr) {
             throw std::runtime_error("Queue is empty");
@@ -121,10 +121,10 @@ std::string NodeQueue::Dequeue() {
     return value;
 }
 
-std::string* NodeQueue::GetQueue() {
-    std::string* elementsArray = nullptr;
+unsigned short* NodeQueue::GetQueue() {
+    unsigned short* elementsArray = nullptr;
     measureExecutionTime([this, &elementsArray] {
-        elementsArray = new std::string[size];
+        elementsArray = new unsigned short[size];
         Node* current = head;
         unsigned short index = 0;
         while (current != nullptr) {
