@@ -1,33 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\",
+  "WorkspaceRootPath": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\SecondForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\SecondForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|solutionrelative:Laboratorka2\\SecondForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\SecondForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\SecondForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|solutionrelative:Laboratorka2\\SecondForm.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|solutionrelative:Laboratorka2\\GUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|solutionrelative:Laboratorka2\\GUI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\Algorithms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\Algorithms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|solutionrelative:Laboratorka2\\Algorithms.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\Algorithms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\Algorithms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|solutionrelative:Laboratorka2\\Algorithms.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B08B670F-CF70-4A20-84F6-A6DE3F979BAD}|Laboratorka2\\Laboratorka2.vcxproj|solutionrelative:Laboratorka2\\GUI.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -38,28 +38,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SecondForm.h [Design]",
-              "DocumentMoniker": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\SecondForm.h",
+              "DocumentMoniker": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\SecondForm.h",
               "RelativeDocumentMoniker": "Laboratorka2\\SecondForm.h",
-              "ToolTip": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\SecondForm.h [Design]*",
-              "RelativeToolTip": "Laboratorka2\\SecondForm.h [Design]*",
+              "ToolTip": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\SecondForm.h [Design]",
+              "RelativeToolTip": "Laboratorka2\\SecondForm.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-26T10:15:38.293Z",
               "EditorCaption": " [Design]"
@@ -68,9 +56,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Algorithms.cpp",
-              "DocumentMoniker": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\Algorithms.cpp",
+              "DocumentMoniker": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\Algorithms.cpp",
               "RelativeDocumentMoniker": "Laboratorka2\\Algorithms.cpp",
-              "ToolTip": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\Algorithms.cpp",
+              "ToolTip": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\Algorithms.cpp",
               "RelativeToolTip": "Laboratorka2\\Algorithms.cpp",
               "ViewState": "AQIAAJEAAAAAAAAAAAAYwKwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -80,9 +68,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Algorithms.h",
-              "DocumentMoniker": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\Algorithms.h",
+              "DocumentMoniker": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\Algorithms.h",
               "RelativeDocumentMoniker": "Laboratorka2\\Algorithms.h",
-              "ToolTip": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\Algorithms.h",
+              "ToolTip": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\Algorithms.h",
               "RelativeToolTip": "Laboratorka2\\Algorithms.h",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAAAQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -92,10 +80,10 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "GUI.h [Design]",
-              "DocumentMoniker": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.h",
+              "DocumentMoniker": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.h",
               "RelativeDocumentMoniker": "Laboratorka2\\GUI.h",
               "ToolTip": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.h [Design]",
-              "RelativeToolTip": "Laboratorka2\\GUI.h [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-09T23:20:24.623Z"
             },
@@ -103,9 +91,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "GUI.cpp",
-              "DocumentMoniker": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.cpp",
+              "DocumentMoniker": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.cpp",
               "RelativeDocumentMoniker": "Laboratorka2\\GUI.cpp",
-              "ToolTip": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.cpp",
+              "ToolTip": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.cpp",
               "RelativeToolTip": "Laboratorka2\\GUI.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -115,9 +103,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "GUI.h",
-              "DocumentMoniker": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.h",
+              "DocumentMoniker": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.h",
               "RelativeDocumentMoniker": "Laboratorka2\\GUI.h",
-              "ToolTip": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\GUI.h",
+              "ToolTip": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\GUI.h",
               "RelativeToolTip": "Laboratorka2\\GUI.h",
               "ViewState": "AQIAAOoBAAAAAAAAAAAUwBYCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -127,14 +115,13 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "SecondForm.h",
-              "DocumentMoniker": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\SecondForm.h",
+              "DocumentMoniker": "C:\\FICT\\TA\\Labaratorka2\\Laboratorka3\\Laboratorka2\\SecondForm.h",
               "RelativeDocumentMoniker": "Laboratorka2\\SecondForm.h",
               "ToolTip": "C:\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\SecondForm.h*",
-              "RelativeToolTip": "Laboratorka2\\SecondForm.h*",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\kseni\\source\\repos\\TA_labs\\Laboratorka3\\Laboratorka2\\SecondForm.h*",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-11T19:09:15.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-11T19:09:15.318Z"
             }
           ]
         }
