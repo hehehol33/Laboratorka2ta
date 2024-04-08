@@ -1,6 +1,6 @@
 ﻿#include "TaQueues.h"
 
-// Queue methods implementation
+// Релизация очереди с массивами
 
 template<typename Func>
 void ArrQueue::measureExecutionTime(Func&& func) {
@@ -81,7 +81,7 @@ ArrQueue::~ArrQueue() {
     delete[] Shrt_queue;
 }
 
-// NodeQueue methods implementation
+// Очередь через указатели
 
 template<typename Func>
 void NodeQueue::measureExecutionTime(Func&& func) {
