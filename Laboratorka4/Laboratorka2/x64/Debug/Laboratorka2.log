@@ -1,4 +1,4 @@
 ﻿  GUI.cpp
-C:\Users\Andrew\Desktop\Laboratorka4\Laboratorka2\GUI.cpp(13,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+C:\FICT\TA\Labaratorka2\Laboratorka4\Laboratorka2\GUI.cpp(13,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   Queues.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Laboratorka2.vcxproj -> C:\Users\Andrew\Desktop\Laboratorka4\x64\Debug\Laboratorka4.exe
+  Laboratorka2.vcxproj -> C:\FICT\TA\Labaratorka2\Laboratorka4\x64\Debug\Laboratorka4.exe

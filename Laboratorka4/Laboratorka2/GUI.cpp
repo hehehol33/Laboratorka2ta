@@ -1,11 +1,11 @@
 ﻿#include "GUI.h" // Подключаем файл заголовка для формы
- // А это уже файл заголовка для алгоритмов
-#include "TaQueues.h"
+#include "TaQueues.h" // А это уже файл заголовка для алгоритмов очереди
+
 
 using namespace System; // Нужные пространства имен для работы с формами и не только
 using namespace System::Windows::Forms;
 
-
+#define QUEUE_SIZE 20 // Добавил изменяемость для размера очереди 
 
 
 [STAThreadAttribute]
@@ -20,11 +20,12 @@ void main(array<String^>^ args)
 
 System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    QueueArr names;
-    unsigned long int totalTime = 0;
     listBox1->Items->Clear();
     listBox2->Items->Clear();
-    for (int i = 1; i <= 18; ++i) {
+    QueueArr names;
+    unsigned long int totalTime = 0;
+
+    for (int i = 1; i <= QUEUE_SIZE; ++i) {
         String^ message = "The teacher is checking assignment " + i.ToString();
         listBox1->Items->Add(message);
         listBox1->Refresh();
@@ -48,7 +49,7 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
 
     totalTime = 0;
 
-    for (int i = 1; i <= 18; ++i) {
+    for (int i = 1; i <= QUEUE_SIZE; ++i) {
         std::string removed_item = names.Dequeue();
 
         String^ message = "Assignments marked in Campus: " + gcnew System::String(removed_item.c_str());
@@ -74,12 +75,12 @@ System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, Sy
 
 System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    
-        NodeQueue names;
-        unsigned long int totalTime = 0;
         listBox1->Items->Clear();
         listBox2->Items->Clear();
-        for (int i = 1; i <= 18; ++i) {
+        NodeQueue names;
+        unsigned long int totalTime = 0;
+
+        for (int i = 1; i <= QUEUE_SIZE; ++i) {
             String^ message = "The teacher is checking assignment " + i.ToString();
             listBox1->Items->Add(message);
             listBox1->Refresh();
@@ -93,7 +94,7 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
             }
 
             listBox1->Items->Add(gcnew System::String(queueOutput.c_str()));
-             listBox1->Refresh();
+            listBox1->Refresh();
 
             totalTime += names.ExecTime();
         }
@@ -103,7 +104,7 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
     
          totalTime = 0;
 
-        for (int i = 1; i <= 18; ++i) {
+        for (int i = 1; i <= QUEUE_SIZE; ++i) {
             std::string removed_item = names.Dequeue();
 
             String^ message = "Assignments marked in Campus: " + gcnew System::String(removed_item.c_str());
