@@ -1,0 +1,3 @@
+C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\Debug\Laboratorka2.vcxproj.AssemblyReference.cache
+C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\Debug\Laboratorka2.GUI.resources
+C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\Debug\Laboratorka2.vcxproj.GenerateResource.cache
