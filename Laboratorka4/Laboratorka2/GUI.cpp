@@ -22,8 +22,10 @@ void main(array<String^>^ args)
 
 System::Void Laboratorka4::MainForm::button_arr_Click(System::Object^ sender, System::EventArgs^ e)
 {
+
     ArrayForm^ arrayForm = gcnew ArrayForm();
     arrayForm->Show();
+
 }
 
 System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, System::EventArgs^ e)
@@ -31,3 +33,6 @@ System::Void Laboratorka4::MainForm::button_point_Click(System::Object^ sender, 
     PointerForm^ pointerForm = gcnew PointerForm();
     pointerForm->Show();
 }
+
+
+
