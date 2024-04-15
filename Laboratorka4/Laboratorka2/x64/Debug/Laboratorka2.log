@@ -1,3 +1,6 @@
-﻿  PointerForm.cpp
+﻿  GUI.cpp
+C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\GUI.cpp(15,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  PointerForm.cpp
+  Generating Code...
   ArrayForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Laboratorka2.vcxproj -> C:\Users\kseni\source\repos\TA_labs\Laboratorka4\x64\Debug\Laboratorka4.exe
+  Laboratorka2.vcxproj -> C:\Users\kseni\Source\Repos\TA_labs\Laboratorka4\x64\Debug\Laboratorka4.exe

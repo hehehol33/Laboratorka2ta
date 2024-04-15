@@ -48,6 +48,7 @@ namespace Laboratorka4 {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::ListBox^ listBox2;
 	private: System::Windows::Forms::ListBox^ listBox1;
+	private: System::Windows::Forms::Label^ label_execution_time;
 
 	protected:
 
@@ -85,6 +86,7 @@ namespace Laboratorka4 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->listBox2 = (gcnew System::Windows::Forms::ListBox());
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+			this->label_execution_time = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button_delete_grade
@@ -227,12 +229,22 @@ namespace Laboratorka4 {
 			this->listBox1->Size = System::Drawing::Size(329, 388);
 			this->listBox1->TabIndex = 13;
 			// 
+			// label_execution_time
+			// 
+			this->label_execution_time->AutoSize = true;
+			this->label_execution_time->Location = System::Drawing::Point(780, 591);
+			this->label_execution_time->Name = L"label_execution_time";
+			this->label_execution_time->Size = System::Drawing::Size(11, 16);
+			this->label_execution_time->TabIndex = 26;
+			this->label_execution_time->Text = L"-";
+			// 
 			// PointerForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->ClientSize = System::Drawing::Size(1082, 636);
+			this->Controls->Add(this->label_execution_time);
 			this->Controls->Add(this->button_delete_grade);
 			this->Controls->Add(this->button_delete);
 			this->Controls->Add(this->label3);

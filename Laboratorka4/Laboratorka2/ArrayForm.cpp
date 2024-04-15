@@ -1,6 +1,6 @@
 ﻿#include "ArrayForm.h"
 #include "TaQueues.h"
-
+#include "GUI.h"
 ArrQueue arrQueue;
 unsigned long int elementCount = 0;
 
@@ -18,6 +18,8 @@ System::Void Laboratorka4::ArrayForm::button_save_Click(System::Object^ sender, 
     listBox1->Items->Insert(0, displayText);
     listBox2->Items->Add( displayText);
     textBox_input->Clear();
+    unsigned int arrQueueExecTime = arrQueue.ExecTime();
+    label_execution_time->Text = "ArrQueue Execution Time: " + arrQueueExecTime.ToString();
 }
 
 System::Void Laboratorka4::ArrayForm::ArrayForm_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e)
@@ -27,55 +29,33 @@ System::Void Laboratorka4::ArrayForm::ArrayForm_FormClosing(System::Object^ send
 }
 
 
-System::Void Laboratorka4::ArrayForm::button_save2_Click(System::Object^ sender, System::EventArgs^ e)
-{
-    //треба вибрати елемент для виставлення оцінки в діапазоні 1-100
-    int selectedIndex = listBox2->SelectedIndex;
-    if (selectedIndex >= 0 && selectedIndex < listBox2->Items->Count)
-    {
-        
-        String^ selectedText = listBox2->Items[selectedIndex]->ToString();
 
-     
+System::Void Laboratorka4::ArrayForm::button_save2_Click(System::Object^ sender, System::EventArgs^ e) {
+    int selectedIndex = listBox2->SelectedIndex;
+    if (selectedIndex >= 0 && selectedIndex < listBox2->Items->Count) {
+        String^ selectedText = listBox2->Items[selectedIndex]->ToString();
         String^ grade = textBox_input_grade->Text;
 
-        // перевірка, чи введене значення є числом та чи знаходиться в межах від 1 до 100
+        // перевірка валідності оцінки
         int gradeValue;
-        if (Int32::TryParse(grade, gradeValue) && gradeValue >= 1 && gradeValue <= 100)
-        {
-           
+        if (Int32::TryParse(grade, gradeValue) && gradeValue >= 1 && gradeValue <= 100) {
             int lastPipeIndex = selectedText->LastIndexOf("|");
-
-           
-            if (lastPipeIndex >= 0)
-            {
-                //заміняємо оцінкку
-              
+            if (lastPipeIndex >= 0) {
                 String^ textWithoutGrade = selectedText->Substring(0, lastPipeIndex);
-
-                
                 listBox2->Items[selectedIndex] = textWithoutGrade + "| " + grade;
             }
-            else
-            {
-               
+            else {
                 String^ updatedText = selectedText + "  | " + grade;
-
-               
                 listBox2->Items[selectedIndex] = updatedText;
             }
-
-          
             textBox_input_grade->Clear();
         }
-        else
-        {
-            MessageBox::Show("The grade has be between 1 - 100");
+        else {
+            MessageBox::Show("The grade must be between 1 - 100");
         }
     }
-    else
-    {
-        MessageBox::Show("Choose assigment to grade .");
+    else {
+        MessageBox::Show("Choose an assignment to grade.");
     }
 }
 

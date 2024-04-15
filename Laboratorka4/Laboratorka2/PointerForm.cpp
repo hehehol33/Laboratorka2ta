@@ -17,6 +17,8 @@ System::Void Laboratorka4::PointerForm::button_save_Click(System::Object^ sender
     listBox1->Items->Insert(0, displayText);
     listBox2->Items->Add(displayText);
     textBox_input->Clear();
+    unsigned int arrQueueExecTime = nodeQueue.ExecTime();
+    label_execution_time->Text = "ArrQueue Execution Time: " + arrQueueExecTime.ToString();
 }
 System::Void Laboratorka4::PointerForm::button_save2_Click(System::Object^ sender, System::EventArgs^ e)
 {

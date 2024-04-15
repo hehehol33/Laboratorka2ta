@@ -5,12 +5,14 @@
 #include <string>
 #include <limits>
 #include <vector>
+#include "ArrayForm.h"
 
 namespace Laboratorka4 {
+	
 
 	// Кількість вершин у графі
 	const int V = 11;
-
+	
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -174,7 +176,7 @@ namespace Laboratorka4 {
 	private: System::Void button_arr_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void button_point_Click(System::Object^ sender, System::EventArgs^ e);
 		   //private: System::Void button_clean_Click(System::Object^ sender, System::EventArgs^ e);
-		 
+	 System::Void UpdateListBoxItem(System::Windows::Forms::ListBox^ listBox, System::Windows::Forms::TextBox^ textBox_grade);
 
 	};
 }

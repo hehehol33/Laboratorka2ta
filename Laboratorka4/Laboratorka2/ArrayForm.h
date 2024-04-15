@@ -27,6 +27,7 @@ namespace Laboratorka4 {
     private: System::Windows::Forms::Label^ label3;
     private: System::Windows::Forms::Button^ button_delete;
     private: System::Windows::Forms::Button^ button_delete_grade;
+    private: System::Windows::Forms::Label^ label_execution_time;
 
            System::String^ text_grade;
 
@@ -84,6 +85,7 @@ namespace Laboratorka4 {
             this->label3 = (gcnew System::Windows::Forms::Label());
             this->button_delete = (gcnew System::Windows::Forms::Button());
             this->button_delete_grade = (gcnew System::Windows::Forms::Button());
+            this->label_execution_time = (gcnew System::Windows::Forms::Label());
             this->SuspendLayout();
             // 
             // listBox1
@@ -226,12 +228,22 @@ namespace Laboratorka4 {
             this->button_delete_grade->UseVisualStyleBackColor = false;
             this->button_delete_grade->Click += gcnew System::EventHandler(this, &ArrayForm::button_delete_grade_Click);
             // 
+            // label_execution_time
+            // 
+            this->label_execution_time->AutoSize = true;
+            this->label_execution_time->Location = System::Drawing::Point(776, 580);
+            this->label_execution_time->Name = L"label_execution_time";
+            this->label_execution_time->Size = System::Drawing::Size(11, 16);
+            this->label_execution_time->TabIndex = 13;
+            this->label_execution_time->Text = L"-";
+            // 
             // ArrayForm
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
             this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
             this->ClientSize = System::Drawing::Size(1082, 636);
+            this->Controls->Add(this->label_execution_time);
             this->Controls->Add(this->button_delete_grade);
             this->Controls->Add(this->button_delete);
             this->Controls->Add(this->label3);
