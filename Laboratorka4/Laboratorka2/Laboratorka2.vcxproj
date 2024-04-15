@@ -127,18 +127,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Queues.cpp" />
+    <ClCompile Include="ArrayForm.cpp" />
     <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="PointerForm.cpp" />
+    <ClCompile Include="Queues.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TaQueues.h" />
+    <ClInclude Include="ArrayForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="GUI.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PointerForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TaQueues.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI.resx">
-      <DependentUpon>GUI.h</DependentUpon>
+    <EmbeddedResource Include="ArrayForm.resx">
+      <DependentUpon>ArrayForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PointerForm.resx">
+      <DependentUpon>PointerForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
