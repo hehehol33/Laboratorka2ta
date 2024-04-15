@@ -13,10 +13,9 @@ C:\Users\kseni\source\repos\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.vcx
 C:\Users\kseni\source\repos\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.GUI.resources
 C:\Users\kseni\source\repos\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.vcxproj.GenerateResource.cache
 C:\FICT\TA\Labaratorka2\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.vcxproj.AssemblyReference.cache
+C:\FICT\TA\Labaratorka2\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.GUI.resources
 C:\FICT\TA\Labaratorka2\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.vcxproj.GenerateResource.cache
 C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.vcxproj.AssemblyReference.cache
 C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.vcxproj.GenerateResource.cache
 C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.ArrayForm.resources
 C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.PointerForm.resources
-C:\FICT\TA\Labaratorka2\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.ArrayForm.resources
-C:\FICT\TA\Labaratorka2\Laboratorka4\Laboratorka2\x64\Debug\Laboratorka2.PointerForm.resources
