@@ -10,6 +10,14 @@ unsigned short OpenAddressingHashTable::FNV1aHashFunction(const std::string& key
     return static_cast<unsigned short>(hash % TABLE_SIZE); // Возвращаем хэш, приведенный к шорту (хотя так т функция дает хэш в 32 бита аж), и берем его остаток от деления на размер таблицы (чтоб не вылезти за границы)
 }
 
+unsigned short OpenAddressingHashTable::JankinsHashFunction(const std::string& key) {
+    unsigned short hash = 0;
+    for (char c : key) {
+        hash = (hash * 31 + c) % TABLE_SIZE;
+    }
+    return hash;
+}
+
 unsigned short OpenAddressingHashTable::linearProbe(unsigned short index, unsigned short probe) const { // Линейное пробирование
     return (index + probe) % TABLE_SIZE; // Просто прибавляем пробу к индексу и берем остаток от деления на размер таблицы
 }
@@ -27,7 +35,7 @@ void OpenAddressingHashTable::measureExecutionTime(Func&& func) { // Прини�
     exec_time = static_cast<unsigned int>(duration.count()); // Записывает время выполнения в переменную
 }
 
-OpenAddressingHashTable::OpenAddressingHashTable(unsigned short size) { // Конструктор класса
+OpenAddressingHashTable::OpenAddressingHashTable(unsigned short& size) { // Конструктор класса
     measureExecutionTime([&]() {
     TABLE_SIZE = size; // Копируем размер таблицы
     table = new Entry[TABLE_SIZE]; // Создаем таблицу динамически с нужным размерчиком
@@ -42,52 +50,62 @@ OpenAddressingHashTable::~OpenAddressingHashTable() { // Деструктор к
 
 
 
-bool OpenAddressingHashTable::insert(const std::string& str, unsigned short num) { // Вставка записи в таблицу
+bool OpenAddressingHashTable::insert(const std::string& str, const unsigned short& num) { // Вставка записи в таблицу
     unsigned short index = FNV1aHashFunction(str); // Получаем индекс куда писать запись в таблицу через хэш-функцию 
+    //unsigned short index = JankinsHashFunction(str); // Получаем индекс куда писать запись в таблицу через хэш-функцию 
     unsigned short probe = 0; // Кол-во проб, изначально 0
     bool inserted = false; // Булевая, нужна для проброса результата вывода через темплейт
 
     measureExecutionTime([&]() { // Темплейт под вермячко
 
-
-        if (!table[index].occupied) { // Теперь если ячейка свободна изначально, то не проганяем через методы решения коллизий
-            table[index].key.str = str; // Пишем в ячейку ФИО
-            table[index].key.num = num; // Пишем в ячейку оценку
+        switch (table[index].occupied) {
+        case false: {
+            //table[index].key.str = str; // Пишем в нее ФИО
             table[index].occupied = true; // Помечаем ячейку как занятую
+            table[index].key.str = std::move(str);
+            table[index].key.num = num; // Пишем в ячейку оценку
             inserted = true; // Помечаем, что вставка прошла успешно
+            break;
         }
-        else if (isLinearProbe) { // Если же ячейка занята, и метод разрешения коллизий выбран как линейное пробирование
-            while (probe < MAX_PROBES) { // Пока не упремся в лимит проб
-                unsigned short linearHash = linearProbe(index, probe); // Получаем новый индекс через линейное пробирование
-                if (!table[linearHash].occupied) { // Если ячейка свободна
-                    table[linearHash].key.str = str; // Пишем в нее ФИО
-                    table[linearHash].key.num = num; // Пишем в нее оценку
-                    table[linearHash].occupied = true; // Говорим шо помечены
-                    inserted = true; // Помечаем, что вставка прошла успешно
-                    break; // Выходим из цикла
+        case true: {
+            switch (isLinearProbe) {
+            case true: { // Если же ячейка занята, и метод разрешения коллизий выбран как линейное пробирование
+                while (probe < MAX_PROBES) { // Пока не упремся в лимит проб
+                        index = linearProbe(index, probe); // Получаем новый индекс через линейное пробирование
+                        if (!table[index].occupied) { // Если ячейка свободна
+                            //table[index].key.str = str; // Пишем в нее ФИО
+                            table[index].occupied = true;
+                            table[index].key.str = std::move(str);
+                            table[index].key.num = num; // Пишем в ячейку оценку
+                            // Помечаем ячейку как занятую
+                            inserted = true; // Помечаем, что вставка прошла успешно
+                            break;
+                        }
+                        probe++; // Иначе увеличиваем пробу и на след заход
                 }
-                probe++; // Иначе увеличиваем пробу и на след заход
+            break;
             }
+            case false: { // А если решаем квардратичным пробированием
+                while (probe < MAX_PROBES) {  // Все аналогично первому, но вместо линейного пробирования используем квадратичное
+                        index = quadraticProbe(index, probe);
+                        if (!table[index].occupied) {
+                            table[index].occupied = true; // Помечаем ячейку как занятую
+                            table[index].key.str = std::move(str);
+                            table[index].key.num = num; // Пишем в ячейку оценку
+                            inserted = true; // Помечаем, что вставка прошла успешно
+                            break;
+                        }
+                        probe++;
+                }
+            break;
+            }
+            }
+            break;
         }
-        else if (!isLinearProbe) { // А если решаем квардратичным пробированием
-            while (probe < MAX_PROBES) {  // Все аналогично первому, но вместо линейного пробирования используем квадратичное
-                unsigned short quadraticHash = quadraticProbe(index, probe);
-                if (!table[quadraticHash].occupied) {
-                    table[quadraticHash].key.str = str;
-                    table[quadraticHash].key.num = num;
-                    table[quadraticHash].occupied = true;
-                    inserted = true;
-                    break;
-                }
-                probe++;
-            }
         }
         });
 
-    if (!inserted) { // Если вставка не прошла успешно
-        return false; // Даем знать шо дело дрянь
-    }
-    return true; // Иначе хвастаемся какие мы молодцы
+    return inserted; // Иначе хвастаемся какие мы молодцы
 }
 
 Student OpenAddressingHashTable::search(unsigned short index) { // Поиск записи по индексу

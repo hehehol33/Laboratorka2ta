@@ -25,9 +25,9 @@ System::Void Lab6TA::MainForm::button_create_Click(System::Object^ sender, Syste
         return;
     }
 
-    int tableSize; // Перевірка на коректне перетворення
+    unsigned short tableSize; // Перевірка на коректне перетворення
     try {
-        tableSize = System::Convert::ToInt32(textBoxValue); // Конвертація в int
+        tableSize = System::Convert::ToUInt16(textBoxValue); // Конвертація в int
     }
     catch (System::FormatException^) { // Якщо формат неправильний
         MessageBox::Show("Invalid table size. Please enter a number.");
@@ -62,8 +62,8 @@ System::Void Lab6TA::MainForm::button_add_Click(System::Object^ sender, System::
         System::String^ name = textBox_name->Text;
         System::String^ scoreString = textBox_grade->Text;
 
-        std::string nameStr = msclr::interop::marshal_as<std::string>(name);
-        unsigned short score = System::Convert::ToUInt16(scoreString);
+        const std::string nameStr = msclr::interop::marshal_as<std::string>(name);
+        const unsigned short score = System::Convert::ToUInt16(scoreString);
 
         if (!hashTable->insert(nameStr, score)) {
             MessageBox::Show("Failed to insert into the hash table. It might be full.");
