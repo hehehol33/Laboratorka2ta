@@ -4,3 +4,6 @@ C:\Users\kseni\source\repos\Lab6TA\Lab6TA\x64\Debug\Lab6TA.vcxproj.GenerateResou
 C:\FICT\TA\Labaratorka2\Laboratorka6\Lab6TA\x64\Debug\Lab6TA.vcxproj.AssemblyReference.cache
 C:\FICT\TA\Labaratorka2\Laboratorka6\Lab6TA\x64\Debug\Lab6TA.MainForm.resources
 C:\FICT\TA\Labaratorka2\Laboratorka6\Lab6TA\x64\Debug\Lab6TA.vcxproj.GenerateResource.cache
+C:\Users\kseni\source\repos\TA_labs\Laboratorka6\Lab6TA\x64\Debug\Lab6TA.vcxproj.AssemblyReference.cache
+C:\Users\kseni\source\repos\TA_labs\Laboratorka6\Lab6TA\x64\Debug\Lab6TA.MainForm.resources
+C:\Users\kseni\source\repos\TA_labs\Laboratorka6\Lab6TA\x64\Debug\Lab6TA.vcxproj.GenerateResource.cache

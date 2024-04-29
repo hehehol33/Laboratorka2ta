@@ -18,26 +18,38 @@ void main(array<String^>^ args) {
 
 System::Void Lab6TA::MainForm::button_create_Click(System::Object^ sender, System::EventArgs^ e) {
     System::String^ textBoxValue = textBox_size->Text;
-    tableSize = System::Convert::ToInt32(textBoxValue);
 
-    if (tableSize <= 0) {
+    // Перевірка, чи порожнє значення або складається лише з пробілів
+    if (String::IsNullOrWhiteSpace(textBoxValue)) {
+        MessageBox::Show("Please enter a valid table size.");
+        return;
+    }
+
+    int tableSize; // Перевірка на коректне перетворення
+    try {
+        tableSize = System::Convert::ToInt32(textBoxValue); // Конвертація в int
+    }
+    catch (System::FormatException^) { // Якщо формат неправильний
+        MessageBox::Show("Invalid table size. Please enter a number.");
+        return;
+    }
+
+    if (tableSize <= 0) { // Перевірка на позитивний розмір
         MessageBox::Show("Table size must be greater than 0.");
         return;
     }
 
-    if (hashTable != nullptr) {
+    if (hashTable != nullptr) { // Якщо хеш-таблиця вже існує, видалити її
         delete hashTable;
     }
 
-    hashTable = new OpenAddressingHashTable(tableSize);
+    hashTable = new OpenAddressingHashTable(tableSize); // Створення нової хеш-таблиці
 
-    isLinearProbe = comboBox_method->SelectedIndex == 0;
-    textBox_size->Text = "";
-    unsigned int execTime = hashTable->getExecutionTime();
-    label_time->Text = "Execution Time: " + execTime.ToString() + " ns";
-    MessageBox::Show("Hash table created successfully.");
-
-   
+    isLinearProbe = comboBox_method->SelectedIndex == 0; // Вибір методу пробування
+    textBox_size->Text = ""; // Очищення текстового поля
+    unsigned int execTime = hashTable->getExecutionTime(); // Отримати час виконання
+    label_time->Text = "Execution Time: " + execTime.ToString() + " ns"; // Оновити лейбл
+    MessageBox::Show("Hash table created successfully."); // Повідомлення про успішне створення
 }
 
 System::Void Lab6TA::MainForm::button_add_Click(System::Object^ sender, System::EventArgs^ e) {
