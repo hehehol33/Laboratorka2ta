@@ -1,0 +1,6 @@
+﻿  MainForm.cpp
+C:\FICT\TA\Labaratorka2\Laboratorka6\Lab6TA\MainForm.cpp(12,33): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  OpenAdressingHashingSource.cpp
+  Generating Code...
+  MainForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Lab6TA.vcxproj -> C:\FICT\TA\Labaratorka2\Laboratorka6\x64\Debug\Lab6TA.exe

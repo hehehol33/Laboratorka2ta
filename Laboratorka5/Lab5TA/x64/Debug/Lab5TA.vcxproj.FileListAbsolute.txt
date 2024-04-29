@@ -1,0 +1,6 @@
+C:\Users\kseni\source\repos\Lab5TA\Lab5TA\x64\Debug\Lab5TA.vcxproj.AssemblyReference.cache
+C:\Users\kseni\source\repos\Lab5TA\Lab5TA\x64\Debug\Lab5TA.MainForm.resources
+C:\Users\kseni\source\repos\Lab5TA\Lab5TA\x64\Debug\Lab5TA.vcxproj.GenerateResource.cache
+C:\Users\Andrew\Desktop\Lab5TA\Lab5TA\x64\Debug\Lab5TA.vcxproj.AssemblyReference.cache
+C:\Users\Andrew\Desktop\Lab5TA\Lab5TA\x64\Debug\Lab5TA.MainForm.resources
+C:\Users\Andrew\Desktop\Lab5TA\Lab5TA\x64\Debug\Lab5TA.vcxproj.GenerateResource.cache

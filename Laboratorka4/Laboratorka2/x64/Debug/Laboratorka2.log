@@ -1,6 +1,4 @@
-﻿  GUI.cpp
-C:\Users\kseni\source\repos\TA_labs\Laboratorka4\Laboratorka2\GUI.cpp(15,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  PointerForm.cpp
-  Generating Code...
+﻿  ArrayForm.cpp
+C:\FICT\TA\Labaratorka2\Laboratorka4\Laboratorka2\ArrayForm.cpp(13,35): warning C4244: 'argument': conversion from 'unsigned long' to 'const unsigned short', possible loss of data
   ArrayForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Laboratorka2.vcxproj -> C:\Users\kseni\Source\Repos\TA_labs\Laboratorka4\x64\Debug\Laboratorka4.exe
+  Laboratorka2.vcxproj -> C:\FICT\TA\Labaratorka2\Laboratorka4\x64\Debug\Laboratorka4.exe

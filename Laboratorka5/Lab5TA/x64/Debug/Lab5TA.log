@@ -1,0 +1,8 @@
+﻿  MainForm.cpp
+C:\Users\Andrew\Desktop\Lab5TA\Lab5TA\MainForm.cpp(12,38): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+C:\Users\Andrew\Desktop\Lab5TA\Lab5TA\MainForm.cpp(49,102): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  SimplrHash.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  MainForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Lab5TA.vcxproj -> C:\Users\Andrew\Desktop\Lab5TA\x64\Debug\Lab5TA.exe

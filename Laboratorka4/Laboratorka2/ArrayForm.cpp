@@ -11,6 +11,7 @@ System::Void Laboratorka4::ArrayForm::button_save_Click(System::Object^ sender, 
 
     // Додавання елемента до черги
     arrQueue.Enqueue(elementCount + 1);
+    unsigned int arrQueueExecTime = arrQueue.ExecTime();
     elementCount++;
     String^ displayText = text_person + " " + elementCount;
 
@@ -18,7 +19,7 @@ System::Void Laboratorka4::ArrayForm::button_save_Click(System::Object^ sender, 
     listBox1->Items->Insert(0, displayText);
     listBox2->Items->Add( displayText);
     textBox_input->Clear();
-    unsigned int arrQueueExecTime = arrQueue.ExecTime();
+    
     label_execution_time->Text = "ArrQueue Execution Time: " + arrQueueExecTime.ToString();
 }
 
