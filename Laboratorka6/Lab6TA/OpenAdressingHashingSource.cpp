@@ -48,7 +48,12 @@ OpenAddressingHashTable::~OpenAddressingHashTable() { // Деструктор к
     
 }
 
-
+void OpenAddressingHashTable::UseQuadraticProbe(bool mode) // Устанавливает режим для разрешения коллизий
+{
+    measureExecutionTime([&]() {
+        isLinearProbe = !mode; // Просто меняет флаг на инвертированный переданный, true - линейное пробирование, false - квадратичное
+        });
+}
 
 bool OpenAddressingHashTable::insert(const std::string& str, const unsigned short& num) { // Вставка записи в таблицу
     unsigned short index = FNV1aHashFunction(str); // Получаем индекс куда писать запись в таблицу через хэш-функцию 
@@ -100,12 +105,17 @@ bool OpenAddressingHashTable::insert(const std::string& str, const unsigned shor
             break;
             }
             }
-            break;
+        break;
         }
         }
         });
 
     return inserted; // Иначе хвастаемся какие мы молодцы
+}
+
+bool OpenAddressingHashTable::insert(const Student& input)
+{
+    return OpenAddressingHashTable::insert(input.str, input.num); // Перегружаем метод, чтоб тот мог принимать данные структурой студента
 }
 
 Student OpenAddressingHashTable::search(unsigned short index) { // Поиск записи по индексу
