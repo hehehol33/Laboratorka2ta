@@ -18,7 +18,7 @@ class OpenAddressingHashTable { // Сам класс хэш-таблицы с о
 private:
     unsigned short TABLE_SIZE; // Размер таблицы, задается в конструкторе
     static const unsigned short MAX_PROBES = 5; // Максимальное количество проб при коллизии
-    bool isLinearProbe = false; // Флаг, указывающий на метод разрешения коллизий, true - линейное пробирование, false - квадратичное
+    bool isLinearProbe = true; // Флаг, указывающий на метод разрешения коллизий, true - линейное пробирование, false - квадратичное
     unsigned int exec_time = NULL; // Время выполнения последней операции
 
     struct Entry { // Структура записи в таблице
